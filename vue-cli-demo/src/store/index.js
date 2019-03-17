@@ -9,6 +9,8 @@ const actions={ //管理mutations
   abc:({commit,state})=>{  //组件调用@click="$store.dispatch('abc')" 
     commit('abc');
   }
+
+  
   
 }
 
