@@ -17,6 +17,9 @@ const actions={ //管理mutations
 const mutations={  //改变数据状态
   abc:(state)=>{  //组件调用此方法： $store.commit('abc');
     state.flag="mutations";  
+  },
+  delete:(state)=>{
+    state.flag--;
   }
 }
 const store=new vuex.Store({
