@@ -29,6 +29,11 @@ export default new Router({
       component: Catgory
     },
     {
+      path: '/catgory/:id',
+      name: 'Catgory',
+      component: Catgory
+    },
+    {
       path: '/find',
       name: 'Find',
       component: Find

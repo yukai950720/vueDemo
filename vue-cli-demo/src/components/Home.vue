@@ -5,11 +5,19 @@
       <HomeHeaderview/>
       <!--轮播区-->
       <HomeBannerview/>
+
+      <!--vuex使用-->
+      {{count1}}
+      {{$store.state.count}}
+      <button @click="add()">+</button>
+      <button @click="del()">-</button>
+
       <!--导航区-->
       <HomeNavview/>
       <!--商品区-->
       <HomeMainview :msg="msg"/>
 
+      
       
 
   </div>
@@ -33,11 +41,27 @@ export default {
     HomeNavview,
     HomeMainview
     
+  },
+  methods: {
+    
+    add(){
+      this.$store.dispatch('add');
+    },
+    del(){
+      this.$store.dispatch('del');
+    }
+
+
+  },
+  computed: {
+    count1(){
+      return this.$store.state.flag;
+    }
   }
   
 }
 </script>
-<style scoped>
+<style>
 
 </style>
 

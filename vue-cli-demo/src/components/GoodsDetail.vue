@@ -81,6 +81,9 @@ export default {
     mounted(){
         this.getDetail(this.$route.params.id);
     },
+    destroyed () {//销毁
+        
+    },
     methods:{
         
 
