@@ -123,6 +123,13 @@ export default {
         },
         play:function(){
             setInterval(this.autoPlay,2000)
+        },
+        addToCart:function(){
+            //深拷贝
+            var cartData=JSON.parse(JSON.stringify(this.goodsData[0]));
+            this.$store.dispatch('cartAdd',cartData);
+            this.$router.push('/cart');
+
         }
     }
   

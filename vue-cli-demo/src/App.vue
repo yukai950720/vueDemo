@@ -1,7 +1,7 @@
 <template>
   <div id="app">
       <router-view></router-view>
-      <NavButton></NavButton>
+      <NavButton v-if="flg"></NavButton>
   </div>
 </template>
 
@@ -11,7 +11,12 @@ export default {
   name: 'App',
   components:{
     NavButton,
-  }
+  },
+  computed: {
+    flg(){
+      return this.$store.state.flg;
+    }
+  },
 }
 </script>
 
